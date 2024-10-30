@@ -1,0 +1,12 @@
+[Unit]
+Description=Random Writer Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/dominik/roboty/random_writer.py /home/dominik/testowy.txt 5
+Restart=always
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

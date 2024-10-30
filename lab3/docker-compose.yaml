@@ -1,0 +1,8 @@
+services:
+  random_writer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: random_writer_service
+    restart: unless-stopped
+    privileged: true
